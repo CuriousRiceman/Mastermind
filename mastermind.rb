@@ -32,7 +32,7 @@ class Mastermind
             puts " "
             puts "Computer is the mastermind. You are the code breaker. "
             @code = COLORS.sample(4)
-            p code
+            # p code used for debugging
         end
     end
 
@@ -109,9 +109,9 @@ class CodeBreaker
                             array_hint[slot] = "B"
                         elsif code.include?(@code_guessed[slot])
                             array_hint[slot] = "W"
-                        else
-                            colors.delete(@code_guessed[slot])
-                        end
+                        else 
+                            colors.delete(@code_guessed[slot]) #deletes the color so chances of guessing correctly increases
+                        end 
                     end
                     puts "Round#{i}: (#{@code_guessed[0]}) (#{@code_guessed[1]}) (#{@code_guessed[2]}) (#{@code_guessed[3]})"
                     array_hint_sorted = array_hint.sort_by { |element| ["B", "W", " "].index(element) || 3 }
