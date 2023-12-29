@@ -35,7 +35,6 @@ class Mastermind
             # p code used for debugging
         end
     end
-
 end
 
 class CodeBreaker
@@ -49,13 +48,8 @@ class CodeBreaker
         @rounds = 12
     end
 
-    def solve()
-
-    end
-
     def guess(code)
         if @who_is_the_codebreaker == "Player"
-            user_input_valid = false
             puts "Given these options: "
             puts "(R) Red, (B) Blue, (O) Orange, (Y) Yellow, (G) Green, (P) Purple\n "
             for i in 1..@rounds
@@ -123,9 +117,7 @@ class CodeBreaker
                     end
                 end
             end
-            
         end
-            
     end
 end
 
